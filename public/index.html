@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/images/atomo-icone.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/1ed17068cf.js" crossorigin="anonymous"></script>
+    <title>Distribuição Eletrônica</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Calculadora de Distribuição Eletrônica
+        </h1>
+    </header>
+    <section class="container">
+        <div class="formulario">
+            <div class="parte-esquerda">
+                <h2>Elemento Químico</h2>
+                <div class="input">
+                    <img src="./assets/images/atomo.png" alt="átomo">
+                    <input type="text" placeholder="Ex: Na" id="elemento">
+                </div>
+            </div>
+            <div class="parte-direita">
+                <h2>Carga</h2>
+                <select id="carga">
+                    <option value="-2">-2</option>
+                    <option value="-1">-1</option>
+                    <option value="0" selected>0</option>
+                    <option value="1">+1</option>
+                    <option value="2">+2</option>
+                </select>
+            </div>
+        </div>
+        <div class="button">
+            <button onclick="calcular()">Calcular</button>
+        </div>
+    </section>
+    <div class="container-resposta outputs hidden">
+        <div>
+            <h2>Classificação por Camadas</h2>
+            <div>
+                <span class="camadas"></span><br>
+                <span class="camadas"></span><br>
+                <span class="camadas"></span><br>
+                <span class="camadas"></span><br>
+                <span class="camadas"></span><br>
+                <span class="camadas"></span><br>
+                <span class="camadas"></span><br>
+            </div>
+        </div>
+
+        <div class="outputs hidden">
+            <h2>Classificação por Subníveis</h2>
+            <div>
+                <span class="subnivel">
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="geral outputs hidden">
+        <h2>Propriedades do Elemento</h2>
+        <div>
+            <span class="propriedades">Nome do elemento: </span> <br>
+            <span class="propriedades">Abreviação: </span><br>
+            <span class="propriedades">Número Atômico: </span><br>
+            <span class="propriedades"> Massa: </span><br>
+            <span class="propriedades">Número de Eletróns: </span> <br>
+            <span class="propriedades">Número de Protons: </span><br>
+            <span class="propriedades">Número de Neutrôns: </span><br>
+        </div>
+    </div>
+    <div class="container-conteudo">
+        <div>
+            <h2>O que é a Distribuição Eletrônica?</h2>
+            <p>
+                &nbsp;A distribuição eletrônica representa a forma como os elétrons
+                se organizam na eletrosfera do elemento químico.
+            </p>
+            <h2>Como é a estrutura do átomo?</h2>
+            <p>
+                &nbsp;O <strong>átomo</strong> é dividido basicamente em duas regiões: O <strong>núcleo</strong> e a
+                <strong>eletrosfera.</strong> <br>
+                &nbsp;O <strong>núcleo</strong> é composto pelos <strong>protóns</strong> (carga <span
+                    style="color: green;">positiva</span>) e os <strong>neutrôns</strong> (carga <span
+                    style="color: gray;">neutra</span>).
+                Os neutrôns são essencias no núcleo do átomo para separar os prótons, pois elementos com cargas iguais
+                se repelem, então jamais
+                conseguiriam permanecer juntos no núcleo atômico. O núcleo também é responsável por aproximadamente toda
+                massa do átomo (em vista de
+                que a massa da eletrosfera é insignificante.) <br>
+                &nbsp;A <strong>eletrosfera</strong> consiste em um espaço majoritariamente vazio (este que é
+                aproximadamente 100.000 vezes o tamanho do núcleo) que comporta
+                os elétrons do átomo, que possuem cargas <span style="color: red;">negativas.</span> Os elétrons nessa
+                eletrosfera são divididos em camadas, como podemos ver na imagem abaixo: <br>
+                <img width="300px" style="margin: 15px"
+                    src="https://static.todamateria.com.br/upload/58/78/5878b0550e7b6-distribuicao-eletronica.jpg"
+                    alt="camadas do eletron"> <br>
+                E dentro dessas camadas, são divididos em subníveis, que será mostrado logo <a
+                    href="#pauling">abaixo</a>.
+            </p>
+            <h2>Diagrama de Pauling</h2>
+            <p>
+                &nbsp;Anteriormente a Pauling, sabia-se que os elétrons eram distribuídos em camadas, porém não havia
+                conhecimento de
+                como eles se organizavam dentro dessas camadas. Pauling conseguiu com seus estudos, descobrir que a
+                forma com que os elétrons
+                se organizavam eram em subníveis, e daí se criou o famoso Diagrama de Linus Pauling. <br>
+                &nbsp;Ao usar o Diagrama de Pauling, um dos erros mais cometidos é
+                de seguir horizontalmente a ordem, sendo que a forma correta seria
+                de acordo com a imagem abaixo: <br>
+                <img src="https://s3-sa-east-1.amazonaws.com/manual-do-enem-test/aae99e4f0cbe47879c002900bfc77156-247.png"
+                    width="300px" style="margin: 15px" alt="Diagrama de Linus Pauling"> <br>
+                &nbsp;Mas por que a ordem tem que ser seguida diagonalmente? <br>
+                &nbsp;Isso ocorre pois ao fazermos a distribuição eletrônica, estamos organizando os subníveis em forma
+                crescente de energia,
+                e devido a <a href="https://www.youtube.com/watch?v=sMt5Dcex0kg" target="_blank">órbita dos
+                    elétrons</a>, pode acontecer de um elétron presente numa camada maior, tenha menos energia de
+                um presente em uma camada menor.
+            </p>
+
+        </div>
+    </div>
+    <footer>
+        <div>
+            Copyright © Gustavo Gava 2021
+        </div>
+    </footer>
+
+    <script src="./assets/scripts/script.js"></script>
+
+</body>
+
+</html>
